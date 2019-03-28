@@ -47,4 +47,4 @@ RUN yum install -y \
 # docker images
 
 ######## remove the old image if you want by , docker rmi <image_id> , then execute the below ########
-# docker build -t centos:yum_updated .
+# docker build -t centos:yum_packages .
