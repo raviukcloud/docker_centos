@@ -1,0 +1,59 @@
+Andreis-MacBook:basecentos ravi$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+centos              yum_pkgs            5810dc69a12a        5 minutes ago       469MB
+centos              yum_updated         b21943976474        18 minutes ago      281MB
+centos              latest              9f38484d220f        13 days ago         202MB
+ubuntu              trusty              390582d83ead        2 weeks ago         188MB
+Andreis-MacBook:basecentos ravi$ docker run -ti 5810dc69a12a bash
+[root@899304f856eb /]# yum info 
+.dockerenv         bin/               etc/               lib/               media/             opt/               root/              sbin/              sys/               usr/
+anaconda-post.log  dev/               home/              lib64/             mnt/               proc/              run/               srv/               tmp/               var/
+[root@899304f856eb /]# yum info 
+.dockerenv         bin/               etc/               lib/               media/             opt/               root/              sbin/              sys/               usr/
+anaconda-post.log  dev/               home/              lib64/             mnt/               proc/              run/               srv/               tmp/               var/
+[root@899304f856eb /]# yum info perl
+Loaded plugins: fastestmirror, ovl
+Loading mirror speeds from cached hostfile
+ * base: mirrors.vooservers.com
+ * epel: mirror.bytemark.co.uk
+ * extras: centos.serverspace.co.uk
+ * updates: mirrors.clouvider.net
+Installed Packages
+Name        : perl
+Arch        : x86_64
+Epoch       : 4
+Version     : 5.16.3
+Release     : 294.el7_6
+Size        : 22 M
+Repo        : installed
+From repo   : updates
+Summary     : Practical Extraction and Report Language
+URL         : http://www.perl.org/
+License     : (GPL+ or Artistic) and (GPLv2+ or Artistic) and Copyright Only and MIT and Public Domain and UCD
+Description : Perl is a high-level programming language with roots in C, sed, awk and shell
+            : scripting.  Perl is good at handling processes and files, and is especially
+            : good at handling text.  Perl's hallmarks are practicality and efficiency.
+            : While it is used to do a lot of different things, Perl's most common
+            : applications are system administration utilities and web programming.  A large
+            : proportion of the CGI scripts on the web are written in Perl.  You need the
+            : perl package installed on your system so that your system can handle Perl
+            : scripts.
+            : 
+            : Install this package if you want to program in Perl or enable your system to
+            : handle Perl scripts.
+
+[root@899304f856eb /]# perl --version
+
+This is perl 5, version 16, subversion 3 (v5.16.3) built for x86_64-linux-thread-multi
+(with 39 registered patches, see perl -V for more detail)
+
+Copyright 1987-2012, Larry Wall
+
+Perl may be copied only under the terms of either the Artistic License or the
+GNU General Public License, which may be found in the Perl 5 source kit.
+
+Complete documentation for Perl, including FAQ lists, should be found on
+this system using "man perl" or "perldoc perl".  If you have access to the
+Internet, point your browser at http://www.perl.org/, the Perl Home Page.
+
+[root@899304f856eb /]# 
