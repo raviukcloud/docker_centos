@@ -43,3 +43,8 @@ RUN yum install -y \
   bzip2
 
 ######## once saved in path or required directory , run the below ########
+
+# docker images
+
+######## remove the old image if you want by , docker rmi <image_id> , then execute the below ########
+# docker build -t centos:yum_updated .
